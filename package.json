@@ -2,10 +2,10 @@
   "name": "ablog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "hot": "nodemon app.js -e *",
+    "start": "node .",
+    "hot": "nodemon . -e *",
     "ui": "browser-sync start -p localhost:3000 --port 3001 -f public,views --reload-delay 1 --no-ui --no-inject-changes --no-notify",
     "dev": "npm-run-all -p hot ui"
   },
