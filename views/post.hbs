@@ -1,0 +1,10 @@
+<main class="main">
+    {{>hero}}
+    <section data-id="{{id}}" class="post single">
+        <div class="container-sm">
+            {{#with post}}
+            {{>post-single}}
+            {{/with}}
+        </div>
+    </section>
+</main>

@@ -1,0 +1,17 @@
+<main class="main admin">
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-inner">
+                <div class="dashboard-tools">
+                    {{#if userData}}
+                    <h1>Hey there, {{userData.username}}!</h1>
+                    {{/if}}
+                    <a href="/dashboard/create">Create Post</a>
+                </div>
+                <div class="dashboard-posts">
+                    {{>dashboard-posts}}
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

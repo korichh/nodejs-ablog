@@ -1,0 +1,16 @@
+<main class="main">
+    {{>hero}}
+    <section class="blog">
+        <div class="container">
+            {{#if posts}}
+            <ul class="blog-list">
+                {{#each posts}}
+                {{>post-summary}}
+                {{/each}}
+            </ul>
+            {{else}}
+            <h1 class="title-center">No posts available</h1>
+            {{/if}}
+        </div>
+    </section>
+</main>

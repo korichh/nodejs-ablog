@@ -1,0 +1,19 @@
+<ul class="menu">
+    {{#if loggedIn}}
+    {{#if userData.is_admin}}
+    <li class="menu-item">
+        <a href="/dashboard">Dashboard</a>
+    </li>
+    {{/if}}
+    <li class="menu-item">
+        <a href="/signout">Sign out</a>
+    </li>
+    {{else}}
+    <li class="menu-item">
+        <a href="/signin">Sign in</a>
+    </li>
+    <li class="menu-item">
+        <a href="/signup">Sign up</a>
+    </li>
+    {{/if}}
+</ul>

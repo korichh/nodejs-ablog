@@ -1,0 +1,21 @@
+<li class="post summary">
+    {{#if @first}}
+    <a href="/post/{{id}}" class="post-inner">
+        <strong class="date">{{format_date createdAt}}</strong>
+        <h1 class="title">{{title}}</h1>
+        <strong class="author">by <span>{{author}}</span></strong>
+        <div class="content">
+            {{format_summary content}}
+        </div>
+    </a>
+    {{else}}
+    <a href="/post/{{id}}" class="post-inner">
+        <strong class="date">{{format_date createdAt}}</strong>
+        <h2 class="title">{{title}}</h2>
+        <strong class="author">by <span>{{author}}</span></strong>
+        <div class="content">
+            {{format_summary content}}
+        </div>
+    </a>
+    {{/if}}
+</li>

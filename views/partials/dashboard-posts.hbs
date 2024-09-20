@@ -1,0 +1,28 @@
+{{#if posts}}
+<table>
+    <thead>
+        <tr>
+            <th width="6%">ID</th>
+            <th width="50%">Title</th>
+            <th width="10%">Author</th>
+            <th width="20%">Created</th>
+            <th width="7%">Edit</th>
+            <th width="7%">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each posts}}
+        <tr>
+            <td>{{id}}</td>
+            <td><a href="/post/{{id}}">{{title}}</a></td>
+            <td>{{author}}</td>
+            <td>{{format_date createdAt}}</td>
+            <td><a href="/dashboard/edit/{{id}}">Edit</a></td>
+            <td><a data-ajax="post-delete" data-id="{{id}}" data-user_id="{{user_id}}" href="#">Delete</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<h1 class="title-center">No posts available</h1>
+{{/if}}

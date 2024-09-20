@@ -1,0 +1,34 @@
+<main class="main admin">
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-inner">
+                {{#with post}}
+                <form data-ajax="edit" data-id="{{id}}" data-user_id="{{user_id}}" class="form-edit form-primary">
+                    <div class="row">
+                        <div class="column">
+                            <h1>Edit Blog Post</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label for="title">Subject / Title</label>
+                            <input type="text" name="title" id="title" placeholder="Express.js and CRUD Operations: A Quick Guide" required value="{{title}}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label for="content">Content</label>
+                            <textarea name="content" id="content" placeholder="Express.js, a minimalist Node.js framework, is a powerful tool for handling CRUD (Create, Read, Update, Delete) operations in web applications..." required>{{content}}</textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <input class="btn btn-primary" type="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+                {{/with}}
+            </div>
+        </div>
+    </section>
+</main>
